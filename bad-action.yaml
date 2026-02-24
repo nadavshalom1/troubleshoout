@@ -20,8 +20,7 @@ jobs:
         with:
           python-version: 'latest'
 
-      - name: Install dependencies
-        pip install -r troubleshooting/01-github-actions/requirements.txt
+     
 
       - name: finish
         run: |
