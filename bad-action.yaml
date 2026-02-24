@@ -5,11 +5,11 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main_branch
+      - main
 
 jobs:
   deploy:
-    runs-on: ubuntu1-latest
+    runs-on: ubuntu-latest
     env:
       SSH_KEY: ${{ secrets.TOP_SECRET }}
     steps:
@@ -18,7 +18,7 @@ jobs:
 
       - uses: setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: 'latest'
 
       - name: Install dependencies
         pip install -r troubleshooting/01-github-actions/requirements.txt
